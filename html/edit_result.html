@@ -1,0 +1,48 @@
+<div class="container content" id="%ID%">
+
+        <section>
+
+            <h2>Aggiorna risultato</h2>
+            %GENERAL_MATCH_MESSAGE%
+            
+            <form id="form" action="actions/edit_result.php" method="POST" onsubmit="return validate_edit_result();">
+                
+                <label for="calGiornataInput">Giornata</label>
+                <input disabled type="number" id="calGiornataInput" value="%CALENDAR_DAY%" />
+
+                <label for="calDataInput">Data</label>
+                <input disabled type="date" id="calDataInput" value="%CALENDAR_DATE%" />
+
+                <label for="calOraInput">Ora</label>
+                <input disabled type="time" id="calOraInput" value="%CALENDAR_TIME%" />
+
+                <label for="calStadioInput">Stadio</label>
+                <input disabled id="calStadioInput" value="%CALENDAR_STADIUM_SINGLE%" />
+                    
+                <label for="calSqCasaInput"><abbr title="squadra">Sq.</abbr> Casa</label>
+                <input disabled id="calSqCasaInput" value="%CALENDAR_HOST_TEAM_SINGLE%" />
+
+                <label for="calSqOspiteInput"><abbr title="squadra">Sq.</abbr> Ospite</label>
+                <input disabled id="calSqOspiteInput" value="%CALENDAR_GUEST_TEAM_SINGLE%" />
+
+
+                <div %RESULT_HOST_ERROR_CLASS%>
+                    <label for="result_host"><abbr title="squadra">Sq.</abbr> Casa <em>(richiesto)</em></label>
+                    <input required type="number" id="result_host" name="result_host" onfocusout="validate_match_result_host()" value="%RESULT_HOST%" min="0" %RESULT_HOST_ERROR_DESCRIBEDBY% />
+                    %RESULT_HOST_ERROR%
+                </div>
+
+                <div %RESULT_GUEST_ERROR_CLASS%>
+                    <label for="result_guest"><abbr title="squadra">Sq.</abbr> Ospite <em>(richiesto)</em></label>
+                    <input required type="number" id="result_guest" name="result_guest" onfocusout="validate_match_result_guest()" value="%RESULT_GUEST%" min="0" %RESULT_GUEST_ERROR_DESCRIBEDBY% />
+                    %RESULT_GUEST_ERROR%
+                </div>
+
+                <input id="submit" type="submit" value="Aggiorna" />
+                <input id="reset_btn" type="reset" value="Reset" />
+                
+            </form>
+    
+        </section>
+        
+    </div>

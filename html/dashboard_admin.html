@@ -1,0 +1,59 @@
+
+
+    <div class="container content" id="%ID%">
+
+    <h2 lang="en">Dashboard Admin</h2>
+
+    <form>
+        <button id="switchDashboard" formaction="dashboard.php">Modalità Utente</button>
+    </form>
+    
+    <section id="adminAddNews">
+
+        <h3>Inserisci nuova notizia</h3>
+        %GENERAL_NEWS_MESSAGE%
+
+        <form id="form" action="actions/add_article.php" method="POST" enctype="multipart/form-data" onsubmit="return validate_news();">
+
+            <div %NEWS_TITLE_ERROR_CLASS%>
+                <label for="newsTitleInput">Titolo <em>(richiesto)</em></label>
+                <input required type="text" id="newsTitleInput" name="news_title" value="%NEWS_TITLE%" onfocusout="validate_news_title()" %NEWS_TITLE_ERROR_DESCRIBEDBY% />
+                %NEWS_TITLE_ERROR%
+            </div>
+
+            <div %NEWS_BODY_ERROR_CLASS%>
+                <label for="newsBodyInput" id="newsBodyInputLabel">Corpo <em>(richiesto)</em></label>
+                <textarea required id="newsBodyInput" name="news_body" onfocusout="validate_news_body()" %NEWS_BODY_ERROR_DESCRIBEDBY%>%NEWS_BODY%</textarea>
+                %NEWS_BODY_ERROR%
+            </div>
+
+            <div %NEWS_BGIMG_ERROR_CLASS%>
+                <label for="newsBgPicInput">Immagine di copertina</label>
+                <input type="file" id="newsBgPicInput" name="news_backgroundImg" onchange="validate_news_bg_img()" accept=".jpg, .jpeg, .png, .gif" %NEWS_BGIMG_ERROR_DESCRIBEDBY% />
+                %NEWS_BGIMG_ERROR%
+            </div>
+
+            <input type="submit" id="submit" value="Pubblica" />
+            <input type="reset" id="reset" value="Reset" />
+
+        </form>
+
+    </section>
+
+    
+    <section id="gestionePartite">
+
+        <h3>Gestione partite</h3>
+                
+        %GENERAL_MATCH_MESSAGE%
+
+        <form>
+            <button formaction="add_match.php">Aggiungi partita</button>
+        </form>
+
+        %ADMIN_DASHBOARD_TABLE%
+
+    </section>
+    
+</div>
+

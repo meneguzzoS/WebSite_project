@@ -1,0 +1,72 @@
+    <div class="container content" id="%ID%">
+
+        <section>
+            <h2>Modifica partita</h2>
+
+            %GENERAL_MATCH_MESSAGE%
+            
+            
+
+            <form id="form" action="actions/edit_match.php" method="POST" onsubmit="return validate_edit_match();">
+            
+                <label for="calGiornataInput">Giornata</label>
+                <input disabled type="number" id="calGiornataInput" value="%CALENDAR_DAY%" />
+
+
+                <div %CALENDAR_DATE_ERROR_CLASS%>
+                    <label for="calDataInput">Data <em>(richiesto)</em></label>
+                    <input required type="date" id="calDataInput" name="calendar_date" value="%CALENDAR_DATE%" onfocusout="validate_match_date()" %CALENDAR_DATE_ERROR_DESCRIBEDBY% />
+                    %CALENDAR_DATE_ERROR%
+                </div>
+
+                <div %CALENDAR_TIME_ERROR_CLASS%>
+                    <label for="calOraInput">Ora <em>(richiesto)</em></label>
+                    <input required type="time" id="calOraInput" name="calendar_time" value="%CALENDAR_TIME%" onfocusout="validate_match_time()" %CALENDAR_TIME_ERROR_DESCRIBEDBY% />
+                    %CALENDAR_TIME_ERROR%
+                </div>
+
+                <div %CALENDAR_STADIUM_ERROR_CLASS%>
+                    <label for="calStadioInput">Stadio <em>(richiesto)</em></label>
+                    <select id="calStadioInput" required onfocusout="validate_match_stadium()" name="calendar_stadium" %CALENDAR_STADIUM_ERROR_DESCRIBEDBY%>
+                        %CALENDAR_STADIUM_LIST%
+                    </select>
+                    %CALENDAR_STADIUM_ERROR%
+                </div>
+
+                <div %CALENDAR_HOST_TEAM_ERROR_CLASS%>
+                    <label for="calSqCasaInput"><abbr title="squadra">Sq.</abbr> Casa <em>(richiesto)</em></label>
+                    <select id="calSqCasaInput" onfocusout="validate_match_home_team()" required name="calendar_host_team" %CALENDAR_HOST_TEAM_ERROR_DESCRIBEDBY%>
+                        %CALENDAR_HOST_TEAM_LIST%
+                    </select>
+                    %CALENDAR_HOST_TEAM_ERROR%
+                </div>
+
+                <div> %CALENDAR_GUEST_TEAM_ERROR_CLASS%
+                    <label for="calSqOspiteInput"><abbr title="squadra">Sq.</abbr> Ospite <em>(richiesto)</em></label>
+                    <select id="calSqOspiteInput" onfocusout="validate_match_guest_team()" required name="calendar_guest_team" %CALENDAR_GUEST_TEAM_ERROR_DESCRIBEDBY%>
+                        %CALENDAR_GUEST_TEAM_LIST%
+                    </select>
+                    %CALENDAR_GUEST_TEAM_ERROR%
+                </div>
+
+
+                <label for="pricePlateaInput">Prezzo Platea</label>
+                <input disabled type="number" id="pricePlateaInput" value="%CALENDAR_PRICE_PLATEA%" />
+
+                <label for="priceTribunaInput">Prezzo Tribuna</label>
+                <input disabled type="number" id="priceTribunaInput" value="%CALENDAR_PRICE_TRIBUNA%" />
+
+                <label for="priceSpaltiInput">Prezzo Spalti</label>
+                <input disabled type="number" id="priceSpaltiInput" value="%CALENDAR_PRICE_SPALTI%" />
+
+                <label for="priceCurvaInput">Prezzo Curva</label>
+                <input disabled type="number" id="priceCurvaInput" value="%CALENDAR_PRICE_CURVA%" />
+
+
+                <input id="submit" type="submit" value="Modifica" />
+                <input id="reset_btn" type="reset" value="Reset" />
+            </form>
+    
+        </section>
+        
+    </div>

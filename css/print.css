@@ -1,0 +1,369 @@
+* {
+    margin: 0.5em;
+    padding: 0;
+}
+
+body {
+    font-family: "Times New Roman", Times, serif;
+    line-height: 1.6;
+    font-size: 12pt;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+a {
+    color: #023E8A;
+    font-weight: 800;
+}
+
+section {
+    margin: 1em;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2em;
+}
+
+abbr {
+    text-decoration: none;
+}
+
+/*
+*
+*  HEADER
+*
+*/
+
+header {
+    color: #000;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3em;
+}
+
+header h2 {
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+/*
+*
+*  NAVBAR, BREADCRUMB
+*
+*/
+
+#navbar,
+footer,
+#arrow,
+.scReadHint {
+    display: none;
+}
+
+
+#logo {
+    width: 6rem;
+    float: left;
+}
+
+#breadcrumb {
+    text-align: left;
+    margin-top: 1em;
+}
+
+#breadcrumb h2,
+#breadcrumb ol,
+#breadcrumb li {
+    display: inline-block;
+}
+
+#breadcrumb h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin-left: 3em;
+}
+
+#breadcrumb ol li:after {
+    content: ' / ';
+    color: #000;
+    font-weight: normal;
+}
+
+#welcome-text {
+    margin-right: 1em;
+}
+
+/*
+*
+*  Home
+*
+*/
+
+#home-content section {
+    width: 100%;
+}
+#home-content #storia{
+    margin-top: 7em;
+}
+.home-news h3 {
+    text-align: center;
+}
+
+#prossimi-eventi {
+    text-align: center;
+}
+
+
+#nextMatchesTable {
+    margin: 1em auto;
+}
+
+table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    border: 1px solid #000;
+}
+
+td,
+th {
+    border: 1px solid #000;
+    overflow: hidden;
+    padding: 3px;
+}
+
+#nuovi-acquisti ul {
+    width: max-content;
+    list-style-type: none;
+    display: block;
+    margin: auto;
+}
+
+#nuovi-acquisti li {
+    display: inline-block;
+    margin: 1em;
+}
+
+#nuovi-acquisti ul li figure figcaption {
+    text-align: center;
+}
+
+/*
+*
+*  NEWS
+*
+*/
+
+#news article {
+    margin: 1em .5em;
+    overflow: hidden;
+}
+
+#news article h3 {
+    text-align: center;
+    font-size: 1.35em;
+}
+
+#news article p {
+    margin: 1em;
+}
+
+#news img {
+    display: none;
+}
+
+#news form,
+#news ul {
+    display: none;
+}
+
+/*
+*
+*  STADIO
+*
+*/
+
+#stadio-content section img {
+    margin: 1em 2em 1em 1em;
+    float: left;
+    width: 40%;
+    height: 30%;
+}
+
+
+/*
+*
+*  SQUADRA
+*
+*/
+
+
+#squadra-content {
+    text-align: center;
+}
+
+#squadra-content ul {
+    list-style-type: none;
+}
+
+#squadra-content li {
+    display: inline-block;
+    margin: 1em auto;
+    padding: 0.5em;
+}
+
+
+/*
+*
+*  DASHBOARD
+*
+*/
+
+#dashboard-content dl {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    height: 10%;
+    margin: auto;
+    overflow: hidden;
+}
+
+#dashboard-content section:first-of-type h3 {
+    margin-bottom: 1em;
+}
+
+#dashboard-content dl dt {
+    font-weight: 800;
+}
+
+table a,
+#biglietteria-content table th:last-child,
+#biglietteria-content table tr td:last-child,
+#dashboard-content button,
+#adminDashboard-content button,
+#followingTicketsTable th:last-child,
+#followingTicketsTable tr td:last-child,
+#matchesTable th:last-child,
+#matchesTable tr td:last-child,
+#home-content #matchesTable tr td:nth-child(8),
+#adminDashboard-content #matchesTable tr td:nth-child(9){
+    display: none;
+}
+
+/*
+*
+*  FORM
+*
+*/
+
+#form select {
+    padding: .5em;
+    margin: auto;
+}
+
+#form fieldset {
+    margin-bottom: 1em;
+    border: none;
+}
+
+#form fieldset legend {
+    font-size: 1.3em;
+    padding: .3em;
+    font-weight: 500;
+}
+
+#form label {
+    display: inline-block;
+    width: 25%;
+}
+
+#form input {
+    display: inline-block;
+    padding: .5em;
+    margin: auto;
+}
+
+form {
+    text-align: center;
+}
+
+#form-login input[type="submit"],
+#form-login input[type="reset"] {
+    display: inline-block;
+}
+
+#form-login section {
+    text-align: center;
+}
+
+#addedit-match-content section {
+    text-align: center;
+}
+
+#addedit-match-content input,
+#addedit-match-content select {
+    display: block;
+    margin: auto;
+    width: 40%;
+}
+
+#addedit-match-content label {
+    display: block;
+    margin: 0 auto;
+}
+
+#addedit-match-content input[type="submit"],
+#addedit-match-content input[type="reset"] {
+    display: inline-block;
+    width: 20%;
+    margin-top: 1em;
+}
+
+/*
+*
+*  CHECKOUT
+*
+*/
+
+#checkout-content {
+    text-align: center;
+}
+
+#checkout-content dl {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    width: 40%;
+    height: 10%;
+    margin: auto;
+    overflow: hidden;
+}
+
+#checkout-content dl dt {
+    font-weight: 800;
+}
+
+#prezzipartita {
+    margin: auto;
+}
+
+#signup-form form input {
+    display: inline-block;
+    width: 30%;
+    padding: .5em;
+    margin: auto;
+    border-radius: .5em;
+    box-sizing: border-box;
+}
+
+#signup-form form #reset_btn,
+#signup-form form #submit {
+    display: inline-block;
+    width: 7%;
+    padding: .5em;
+    margin: auto;
+    border-radius: .5em;
+    box-sizing: border-box;
+}

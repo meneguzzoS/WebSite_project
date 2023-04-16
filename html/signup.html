@@ -1,0 +1,89 @@
+
+    <div class="container content" id="%ID%">
+
+        <section>
+
+            <h2>Registrazione</h2>
+            %GENERAL_SIGNUP_MESSAGE%
+            
+            
+            <form id="form" action="actions/signup.php" method="post" autocomplete="on" onsubmit="return validate_signup();">
+                <fieldset>
+                    <legend>Dati Anagrafici</legend>
+
+                    <div %NAME_ERROR_CLASS%>
+                        <label for="nome">Nome <em>(richiesto)</em></label>
+                        <input type="text" name="nome" id="nome" onfocusout="validate_name()" value="%NOME%" required %NAME_ERROR_DESCRIBEDBY%/>
+                        %NAME_ERROR%
+                    </div>
+
+                    <div %SURNAME_ERROR_CLASS%>
+                        <label for="cognome">Cognome <em>(richiesto)</em></label>
+                        <input type="text" name="cognome" id="cognome" onfocusout="validate_lastName()" value="%COGNOME%" required %SURNAME_ERROR_DESCRIBEDBY%/>
+                        %SURNAME_ERROR%
+                    </div>
+                        
+                    <div %BIRTHDAY_ERROR_CLASS%>
+                        <label for="calDataInput">Data di Nascita <em>(richiesto)</em></label>
+                        <input type="date" id="calDataInput" name="compleanno" max="2030-12-31" min="1900-12-12" onfocusout="validate_birthDate()" value="%COMPLEANNO%" required %BIRTHDAY_ERROR_DESCRIBEDBY%/>
+                        %BIRTHDAY_ERROR%
+                    </div>
+                        
+                    <div %NATION_ERROR_CLASS%>
+                        <label for="nazione">Nazione di Nascita <em>(richiesto)</em></label>
+                        <input type="text" name="nazione" id="nazione" onfocusout="validate_birthNation()" value="%NAZIONE%" required %NATION_ERROR_DESCRIBEDBY%/>
+                        %NATION_ERROR%
+                    </div>
+
+                    <div %ADDRESS_ERROR_CLASS%>
+                        <label for="indirizzo">Indirizzo <em>(richiesto)</em></label>
+                        <input type="text" name="indirizzo" id="indirizzo" onfocusout="validate_address()" value="%INDIRIZZO%" required %ADDRESS_ERROR_DESCRIBEDBY%/>
+                        %ADDRESS_ERROR%
+                    </div>
+
+                    <div %CITY_ERROR_CLASS%>
+                        <label for="citta">Citt&agrave; <em>(richiesto)</em></label>
+                        <input type="text" name="citta" id="citta" onfocusout="validate_city()" value="%CITTA%" required %CITY_ERROR_DESCRIBEDBY%/> 
+                        %CITY_ERROR%
+                    </div>
+
+                    <div %CAP_ERROR_CLASS%>
+                        <label for="cap"><abbr title="Codice di Avviamento Postale">CAP</abbr> <em>(richiesto)</em></label>
+                        <input type="text" name="cap" id="cap" onfocusout="validate_cap()" value="%CAP%" required %CAP_ERROR_DESCRIBEDBY%/>
+                        %CAP_ERROR%
+                    </div>
+
+                    <div %PHONE_ERROR_CLASS%>
+                        <label for="telefono">Telefono <em>(richiesto)</em></label>
+                        <input type="tel" id="telefono" name="telefono" onfocusout="validate_phone()" value="%TELEFONO%" required %PHONE_ERROR_DESCRIBEDBY%/>
+                        %PHONE_ERROR%
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Credenziali d'accesso</legend>
+                    <div %EMAIL_ERROR_CLASS%>
+                        <label for="email" lang="en">E-mail <em>(richiesto)</em></label>
+                        <input type="email" id="email" name="email" onfocusout="validate_email()" value="%EMAIL%" required %EMAIL_ERROR_DESCRIBEDBY%/>
+                        %EMAIL_ERROR%
+                    </div>
+
+                    <div %PSW_ERROR_CLASS%>
+                        <label for="password" lang="en">Password <em>(richiesto)</em></label>
+                        <input type="password" id="password" name="password" onfocusout="validate_pw()" required %PSW_ERROR_DESCRIBEDBY%/>
+                        %PSW_ERROR%
+                    </div>
+
+                    <div %COMPARE_PSW_CLASS%>
+                        <label for="conferma_password">Conferma <span lang="en">password</span> <em>(richiesto)</em></label>
+                        <input type="password" name="conferma_password" id="conferma_password" onfocusout="validate_confirm_pw()" required %COMPARE_PSW_DESCRIBEDBY%/>
+                        %COMPARE_PSW%
+                    </div>
+                </fieldset>
+                
+                <input id="submit" type="submit" value="Registrati"  />
+                <input id="reset_btn" type="reset" value="Reset" />
+            </form>
+
+        </section>
+        
+    </div>

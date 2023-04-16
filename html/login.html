@@ -1,0 +1,32 @@
+
+
+    <div class="container content" id="%ID%">
+
+        <section>
+            <h2 lang="en">Login</h2>
+            %GENERAL_LOGIN_MESSAGE%
+            
+            
+            <form id="form" action="actions/login.php" method="POST" onsubmit="return validate_login();">
+
+                <div %EMAIL_ERROR_CLASS%>
+                    <label for="username" lang="en">E-mail <em>(richiesto)</em></label>
+                    <input  requiredtype="text" name="username" id="username" onfocusout="validate_login_username()" value="%USERNAME%" %EMAIL_ERROR_DESCRIBEDBY%/>
+                    %EMAIL_ERROR%
+                </div>
+
+                <div>
+                    <label for="password" lang="en">Password <em>(richiesto)</em></label>
+                    <input required type="password" name="password" id="password" onfocusout="validate_login_password()" value="%PASSWORD%" />
+                </div>
+
+                <input id="submit" type="submit" value="Login" />
+                <input id="reset_btn" type="reset" value="Reset" />
+            </form>
+            
+            <p>Hai dimenticato la <span lang="en">password</span>? <a href="recupero_password.php">Recupera <span lang="en">password</span></a></p>
+            <p>Non possiedi un <span lang="en">account</span>? <a href="signup.php">Registrati</a></p>
+
+        </section>
+        
+    </div>

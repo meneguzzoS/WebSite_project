@@ -1,0 +1,88 @@
+
+
+
+
+    <div class="container content" id="%ID%">
+
+        <section>
+            <h2>Aggiungi partita</h2>
+
+            %GENERAL_MATCH_MESSAGE%
+            
+            
+            <form id="form" action="actions/add_match.php" method="POST" onsubmit="return validate_add_match();">
+                
+                <div %CALENDAR_DAY_ERROR_CLASS%>
+                    <label for="calGiornataInput">Giornata</label>
+                    <input type="number" id="calGiornataInput" name="calendar_day" min="1" required value="%CALENDAR_DAY%" onfocusout="validate_match_day()" %CALENDAR_DAY_ERROR_DESCRIBEDBY />
+                    %CALENDAR_DAY_ERROR%
+                </div>
+
+                <div %CALENDAR_DATE_ERROR_CLASS%>
+                    <label for="calDataInput">Data</label>
+                    <input type="date" id="calDataInput" name="calendar_date" onfocusout="validate_match_date()" required value="%CALENDAR_DATE%" %CALENDAR_DATE_ERROR_DESCRIBEDBY />
+                    %CALENDAR_DATE_ERROR%
+                </div>
+
+                <div %CALENDAR_TIME_ERROR_CLASS%>
+                    <label for="calOraInput">Ora</label>
+                    <input type="time" id="calOraInput" name="calendar_time" onfocusout="validate_match_time()" required value="%CALENDAR_TIME%" %CALENDAR_TIME_ERROR_DESCRIBEDBY />
+                    %CALENDAR_TIME_ERROR%
+                </div>
+
+                <div %CALENDAR_STADIUM_ERROR_CLASS%>
+                    <label for="calStadioInput">Stadio</label>
+                    <select id="calStadioInput" required onfocusout="validate_match_stadium()" name="calendar_stadium" %CALENDAR_STADIUM_ERROR_DESCRIBEDBY%>
+                        %CALENDAR_STADIUM_LIST%
+                    </select>
+                    %CALENDAR_STADIUM_ERROR%
+                </div>
+
+                <div %CALENDAR_HOST_TEAM_ERROR_CLASS%>
+                    <label for="calSqCasaInput"><abbr title="squadra">Sq.</abbr> Casa</label>
+                    <select id="calSqCasaInput" onfocusout="validate_match_home_team()" required name="calendar_host_team" %CALENDAR_HOST_TEAM_ERROR_DESCRIBEDBY%>
+                        %CALENDAR_HOST_TEAM_LIST%
+                    </select>
+                    %CALENDAR_HOST_TEAM_ERROR%
+                </div>
+
+                <div> %CALENDAR_GUEST_TEAM_ERROR_CLASS%
+                    <label for="calSqOspiteInput"><abbr title="squadra">Sq.</abbr> Ospite</label>
+                    <select id="calSqOspiteInput" onfocusout="validate_match_guest_team()" required name="calendar_guest_team" %CALENDAR_GUEST_TEAM_ERROR_DESCRIBEDBY%>
+                        %CALENDAR_GUEST_TEAM_LIST%
+                    </select>
+                    %CALENDAR_GUEST_TEAM_ERROR%
+                </div>
+
+                <div %CALENDAR_PRICE_PLATEA_ERROR_CLASS%>
+                    <label for="pricePlateaInput">Prezzo Platea</label>
+                    <input type="number" id="pricePlateaInput" name="calendar_price_platea" min="0" onfocusout="validate_match_price_platea()" required value="%CALENDAR_PRICE_PLATEA%" %CALENDAR_PRICE_PLATEA_ERROR_DESCRIBEDBY />
+                    %CALENDAR_PRICE_PLATEA_ERROR%
+                </div>
+
+                <div %CALENDAR_PRICE_TRIBUNA_ERROR_CLASS%>
+                    <label for="priceTribunaInput">Prezzo Tribuna</label>
+                    <input type="number" id="priceTribunaInput" name="calendar_price_tribuna" min="0" onfocusout="validate_match_price_tribuna()" required value="%CALENDAR_PRICE_TRIBUNA%" %CALENDAR_PRICE_TRIBUNA_ERROR_DESCRIBEDBY />
+                    %CALENDAR_PRICE_TRIBUNA_ERROR%
+                </div>
+
+                <div %CALENDAR_PRICE_SPALTI_ERROR_CLASS%>
+                    <label for="priceSpaltiInput">Prezzo Spalti</label>
+                    <input type="number" id="priceSpaltiInput" name="calendar_price_spalti" min="0" onfocusout="validate_match_price_spalti()" required value="%CALENDAR_PRICE_SPALTI%" %CALENDAR_PRICE_SPALTI_ERROR_DESCRIBEDBY />
+                    %CALENDAR_PRICE_SPALTI_ERROR%
+                </div>
+
+                <div %CALENDAR_PRICE_CURVA_ERROR_CLASS%>
+                    <label for="priceCurvaInput">Prezzo Curva</label>
+                    <input type="number" id="priceCurvaInput" name="calendar_price_curva" min="0" required onfocusout="validate_match_price_curva()" value="%CALENDAR_PRICE_CURVA%" %CALENDAR_PRICE_CURVA_ERROR_DESCRIBEDBY />
+                    %CALENDAR_PRICE_CURVA_ERROR%
+                </div>
+
+
+                <input id="submit" type="submit" value="Inserisci" />
+                <input id="reset_btn" type="reset" value="Reset" />
+            </form>
+    
+        </section>
+        
+    </div>

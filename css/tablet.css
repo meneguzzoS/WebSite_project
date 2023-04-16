@@ -1,0 +1,77 @@
+header .container {
+    display: contents;
+    width: 100%;
+}
+
+header #logo {
+    height: 7em;
+    width: 6em;
+}
+
+#navbar #navbar-menu {
+    margin-bottom: 0.5em;
+}
+
+#breadcrumb h2{
+    margin: 0;
+}
+
+/*#navbar { menu da sistemare
+    display: none;
+}*/
+
+#nuovi-acquisti ul {
+    width: 100%;
+    text-align: center;
+}
+
+#home-content section {
+    width: 100%;
+}
+
+section {
+    margin: 0;
+}
+
+#home-news-aside {
+    float: none;
+    width: 70%;
+    margin: auto;
+}
+
+#news article {
+    width: 80%;
+    display: block;
+    margin: 3em auto;
+}
+
+/*#stadio-content img:first-of-type {
+    margin: 1em 0 1em 0;
+}*/
+
+#stadio-content section:first-child {
+    margin-bottom: 2em;
+}
+
+/*#stadio-content section:first-child img {
+    margin-right: 2em;
+}*/
+
+/*
+*
+*
+* SQUADRA
+*
+*/
+
+#squadra-content li {
+    margin: 1em 1em;
+}
+
+form input {
+    width: 80%;
+}
+
+#addedit-match-content input, #addedit-match-content select {
+    width: 100%;
+}

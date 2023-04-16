@@ -1,0 +1,56 @@
+#1	    ridirezione a dashboard se autenticato, serve anche un messaggio?
+		    signup, login
+	
+#2 	    index deve funzionare da fuori php, esplorare metodi migliori con htaccess or mod_rewrite
+
+#3	    elementi "statici" come lo stadio di casa dovrebbero essere eiferiti per nome o id?
+
+#4	    aggiungere indicazione di risorsa esterna dove necessario
+		acquisto esterno in biglietteria
+		badge w3c su footer
+		
+#5	    cambiare i colori css da nome a codice rgb, standardizzare ed eliminare var(--vname)
+
+#6	    usare utenti differenti per lettura, scrittura admin e scrittura biglietteria nel db
+
+#7	    separare comportamento da struttura in checkout, aggiungere riferimenti funzoni su html (cvontrollare gaggi se va bene)
+
+#8	    sistemare comportamento selettori data/ora nelle form
+            signup
+            addedit match
+
+#9      admin e utente dovrebbero essere "email" valide solo in logine vambio pw, non in registrazione
+
+#10	    gestione tempo con strutture appropriate e non con split se necessario
+
+#10.1   coreggere rappesentazione data su news magari con date
+
+#11	    aggiustare pulizia del codice su checkout
+
+#12	    aggiungere HTML required dove necessario
+
+#13	    nelle nav la pagine corrente non deve essere un link
+
+#14     rendere più significativi gli errori ditabella vuota e news vuote su home e news
+
+#15     controllare differenza tra summary e caption per l'acessibilità delle tabelle
+
+#16     endere le pagine personali non acecssibili dai bot
+
+#17     accoppiare gli errori php a quelli js
+
+#18     decidere come errori di query in validazione server devono essere gestiti
+
+#19  x  aggiungere controllo js di squadra uguale    
+
+#20     spostare validazione uquglianza squadre dentro validatore
+
+#21  -  i pezzi dovrebbero essere descritto meglio che prezzo 1, 2, 3, 4
+            - (anche nel db)
+
+??
+
+
+Da aggiungere alla relazione:
+    dal momento che i test di validazione dell'input effettuati da js devono essere rifarri da php ne approfittiamo per restituirne il risultato.
+    inoltre php fa test più accurati che l'utente non incontrerà e non è quindi necessario effettuare o che non possono essere effettuati in js come eseienza di dati sul server (ex formato della data e ora inserita automaticamente)

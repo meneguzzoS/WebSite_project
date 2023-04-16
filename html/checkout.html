@@ -1,0 +1,37 @@
+<div class="container content" id="%ID%">
+
+    <section>
+
+        <h2 lang="en">Checkout</h2>
+        %CHECKOUT_MESSAGE%
+
+        <h3>Dati di fatturazione</h3>
+        %DATI_FATTURAZIONE%
+
+        <h3>Dati Partita</h3>
+        %DATI_PARTITA%
+
+        <h3>Seleziona tipologia di posto:</h3>
+        %TABELLA_POSTI%
+        
+        <form id="form" action="../php/actions/add_acquisto.php" method="POST" onsubmit="return validate_checkout();">
+
+            <div>
+                <label for="tipoposto">Posto:</label>
+                <select required id="tipoposto" name="posto" onfocusout="validate_checkout_seat_type()"> %POSTI% </select>
+            </div>
+
+            <div>
+                <label for="nbiglietti">Numero biglietti <em>(massimo 5 a ordine)</em></label>
+                <input required type="number" id="nbiglietti" name="nbiglietti" onfocusout="validate_checkout_ticket_amount()" min ="1" max="5" />
+            </div>
+
+            <input type="submit" value="Paga" />
+            
+        </form>
+
+    </section>
+
+    <script src="../js/checkout.js"></script>
+
+</div>

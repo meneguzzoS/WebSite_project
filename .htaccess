@@ -1,0 +1,7 @@
+ErrorDocument 403 /php/error.php?error=403
+ErrorDocument 404 /php/error.php?error=404
+ErrorDocument 405 /php/error.php?error=405
+ErrorDocument 408 /php/error.php?error=408
+ErrorDocument 500 /php/error.php?error=500
+ErrorDocument 502 /php/error.php?error=502
+ErrorDocument 504 /php/error.php?error=504
